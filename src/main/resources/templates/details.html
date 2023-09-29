@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+          crossorigin="anonymous">
+    <title>dettagli</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <table>
+            <thead>
+            <tr>
+                <th>title</th>
+                <th>ingredients</th>
+                <th>prepTime</th>
+                <th>recepe</th>
+                <th>portions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td th:text="${ricetta.title}"></td>
+                <td th:text="${ricetta.ingredients}"></td>
+                <td th:text="${ricetta.prepTime}"></td>
+                <td th:text="${ricetta.recepe}"></td>
+                <td th:text="${ricetta.portions}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-primary" th:href="@{/ricette}">back to list</a>
+</div>
+</body>
+</html>
