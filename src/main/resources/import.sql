@@ -1,0 +1,1 @@
+INSERT INTO db_ricette.ricette (foto_link, ingredients, portions, prep_time, recepe, title) VALUES('https://www.giallozafferano.it/images/244-24489/Spaghetti-alla-Carbonara_450x300_sp.jpg','blablablabla',4,'30 minuti','blablabla','carbonara');

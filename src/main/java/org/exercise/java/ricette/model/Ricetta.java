@@ -1,6 +1,8 @@
 package org.exercise.java.ricette.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import org.springframework.boot.context.properties.bind.DefaultValue;
 
 @Entity
 @Table(name = "ricette")
@@ -12,8 +14,9 @@ public class Ricetta {
     private String ingredients;
     private String prepTime;
     private String recepe;
-   @Column(length = 500)
-   private String fotoLink;
+    @Column(length = 500)
+    private String fotoLink;
+    @NotNull
     private int portions;
 
     public Integer getId() {
@@ -62,5 +65,13 @@ public class Ricetta {
 
     public void setPortions(int portions) {
         this.portions = portions;
+    }
+
+    public String getFotoLink() {
+        return fotoLink;
+    }
+
+    public void setFotoLink(String fotoLink) {
+        this.fotoLink = fotoLink;
     }
 }

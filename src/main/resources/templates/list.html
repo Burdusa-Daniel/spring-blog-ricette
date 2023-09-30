@@ -18,7 +18,7 @@
     <div th:if="${ricettaList.size>0}">
         <div th:each="ric : ${ricettaList}">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" th:src="@{/public/piatto.jpeg}" alt="Card image cap">
+                <img  th:src="${ric.fotoLink}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title" th:text="${ric.title}"></h5>
                     <p class="card-text "th:text="${ric.recepe}"></p>
